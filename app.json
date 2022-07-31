@@ -9,7 +9,7 @@
         "search",
         "bot"
     ],
-    "repository": "https://github.com/KGN-BOTS/mdisk-Search-Bot",
+    "repository": "https://github.com/Mihir192/mdisk-search-bot",
     "website": "https://telegram.dog/KGN_OFFICIAL",
     "success_url": "http://t.me/Samantha_Ruth_RoBot",
     "env": {
