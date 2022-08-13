@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 
     await event.reply_text(Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-             InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl")],
+            [InlineKeyboardButton("Our Channel", url="https://t.me/MarathiMoviezFree3"),
+             InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -40,8 +40,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-             InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/MarathiMoviezFree3"),
+             InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -50,7 +50,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-   answer =""
+    answers = f'**📂 Results For ➠ {event.text} \n\\n➠ movie च spelling नीट टाकावं लागेल तरच तुम्हाला movies भेटल✍️\n\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -59,13 +59,10 @@ async def inline_handlers(_, event: Message):
             if "|||" in message.text:
                 f_text = message.text.split("|||", 1)[0]
                 msg_text = message.text.html.split("|||", 1)[0]
-            answers = f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n**'
+            answers += f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n**'
     try:
         await event.reply_text(
-            if answer != "":
-		answers
-	    else: 
-		pass
+            answers
         )
         print(f"[{Config.BOT_SESSION_NAME}] - Answered Successfully - {event.from_user.first_name}")
         await asyncio.sleep(30)
@@ -84,11 +81,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-						InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl")
+						InlineKeyboardButton("Our Channel", url="https://t.me/MarathiMoviezFree3"),
+						InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1")
 					],
 					[
-						InlineKeyboardButton("Developer", url="https://t.me/KGN_OFFICIAL"),
+						InlineKeyboardButton("Developer", url="https://t.me/mihir190"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -103,10 +100,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/KGN_OFFICIAL")
+						InlineKeyboardButton("Our Channel", url="https://t.me/mihir190")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/KGN_OFFICIAL"),
+						InlineKeyboardButton("Owner", url="https://t.me/mihir190"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -124,8 +121,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/KGN_BOTS_SUPPORT"),
-						InlineKeyboardButton("Channel", url="https://t.me/KGN_MOVIES")
+						InlineKeyboardButton("Support", url="https://t.me/marathimoviezgroup1"),
+						InlineKeyboardButton("Channel", url="https://t.me/MarathiMoviezFree3")
 					]
 				]
 			),
