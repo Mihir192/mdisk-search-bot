@@ -3,7 +3,8 @@
 from configs import Config
 from pyrogram import Client, filters, idle
 from pyrogram.errors import QueryIdInvalid
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, InputTextMessageContent
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, \
+    InputTextMessageContent
 from TeamTeleRoid.forcesub import ForceSub
 
 # Bot Client for Inline Search
@@ -49,7 +50,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n Join Our New Channel \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4**'
+    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Please Type Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n\n Join Our New Channel \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -64,7 +65,8 @@ async def inline_handlers(_, event: Message):
             answers
         )
         print(f"[{Config.BOT_SESSION_NAME}] - Answered Successfully - {event.from_user.first_name}")
-       
+        await asyncio.sleep(30)
+        await msg.delete()
     except:
         print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")
 
