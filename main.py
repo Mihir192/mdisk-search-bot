@@ -29,7 +29,7 @@ async def start_handler(_, event: Message):
     await event.reply_text(Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/marathimoviezfree4"),
-             InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1)],
+             InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
