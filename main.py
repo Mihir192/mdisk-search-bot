@@ -50,7 +50,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers =""
+    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Please Type Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n\n Join Our New Channel \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -59,7 +59,7 @@ async def inline_handlers(_, event: Message):
             if "|||" in message.text:
                 f_text = message.text.split("|||", 1)[0]
                 msg_text = message.text.html.split("|||", 1)[0]
-            answers += ""
+            answers += f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n Join Our New Channel \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n https://t.me/marathimoviezfree4 \n\n**'
     try:
         await event.reply_text(
             answers
