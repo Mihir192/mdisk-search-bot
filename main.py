@@ -85,7 +85,7 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("Our Group", url="https://t.me/marathimoviezgroup1")
 					],
 					[
-						InlineKeyboardButton("Developer", url="https://t.me/marathimoviezfree4"),
+						InlineKeyboardButton("Developer", url="https://t.me/mihir190"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -103,7 +103,7 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("Our Channel", url="https://t.me/marathimoviezfree4")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/marathimoviezfree4"),
+						InlineKeyboardButton("Owner", url="https://t.me/mihir190"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
