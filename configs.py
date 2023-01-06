@@ -34,7 +34,7 @@ If You Want Your Own Bot Like This Then You Can Contact Our Developer.</b>
     HOME_TEXT = """
 <b>Hey! {}😅,
 
-I'm Mdisk Search Robot.🤖</a>
+I'm Link Search Robot.🤖</a>
 
 I Can Search!🔍 What You Want?😜
 
@@ -45,7 +45,7 @@ I Can Search!🔍 What You Want?😜
     START_MSG = """
 <b>Hey! {}😅,
 
-I'm Mdisk Search Robot.🤖</a>
+I'm Link Search Robot.🤖</a>
 
 I Can Search!🔍 What You Want?😜
 
