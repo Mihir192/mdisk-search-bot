@@ -38,7 +38,7 @@ I'm Link Search Robot.🤖</a>
 
 I Can Search!🔍 What You Want?😜
 
-<a>Made With ❤ By @mihir192</a></b>
+<a>Made With ❤ By @mihir190/a></b>
 """
 
 
@@ -49,7 +49,7 @@ I'm Link Search Robot.🤖</a>
 
 I Can Search!🔍 What You Want?😜
 
-<a>Made With ❤ By @mihir192</a></b>
+<a>Made With ❤ By @mihir190/a></b>
 """
 
 
